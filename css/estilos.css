@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+  }
+  body{
+  
+  }
+  #contenedor{
+    width: 60%;
+    margin: 10px auto;
+  }
+  p{
+    margin-top: 10px;
+  }
+  .cajas{
+    width: 40%;
+    height: 30px;
+  }
+  .boton{
+    width: 25%;
+    height: 30px;
+    background: mediumseagreen;
+  }
+  .multiple{
+   
+    height: 100px;
+  }
+  .adjuntar{
+    width: 150px;
+    height: 30px;
+    background: white;
+  }
+  .rojo{
+    background: red;
+  }
+  .gris{
+    background: gray;
+  }

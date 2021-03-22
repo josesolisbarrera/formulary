@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con estructura</title>
+       <link rel="stylesheet" href="form.css">
+       </head>
+       <body>
+           <div id="contenedor">
+               <form method="GET" enctype="multipart/form-data">
+                <p>
+                    <label for="id">Id</label>
+                    <input type="text" name="id" id="id" value="10" readonly>
+                </p>
+                   <p>
+                       <label for="nombre">Nombre(s)</label><br>
+                       <input type="text" name="nombre" id="nombre" class="cajas" 
+                       required autofocus placeholder="Escriba su nombre (s) porfavor"
+                       pattern="[A-Za-z ]+$"
+                       title="Ingresa mayusculas, minusculas y espacio">
+                   </p>
+                   <p>
+                    <label for="apellidos">Apellidos</label><br>
+                    <input type="text" name="apellidos" id="apellidos" class="cajas" 
+                    required placeholder="Escriba sus apellidos">
+                </p>
+                <p>
+                    <label for="contraseña">Password</label><br>
+                    <input type="password" name="contrasena" id="contrasena" class="cajas" 
+                    required placeholder="Escriba sus contraseña">
+                </p>
+                <p>
+                    <label>Estados</label><br>
+                    <input type="hidden" name="clave" id="clave" value="1200">
+                </p>
+                <p>
+                    <select name="estado" id="estado" required class="cajas">
+                        <option value="">Seleccione...</option>
+                        <option value="1">Aguascalientes</option>
+                        <option value="18">Puebla</option>
+                        <option value="32">Zacatcas</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="lenguajes">Lenguaje web</label><br>
+                    <select name="lenguajes" id="lenguajes" required class="cajas multiple" multiple>
+                        <option value="html">html</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Java">Java</option>
+                        <option value="Javascript">Javascript</option>
+                    </select>
+                </p>
+                <!--textarea para mensaje o comentario-->
+                <p>
+                    <label for="menssaje">Su mensaje </label><br>
+                    <textarea rows="8" cols="40" required name="mensaje" id="mensaje"></textarea>
+                </p>
+                <!--adjuntr archivos-->
+             <p>
+                <label for="archivo">Adjuntar archivo</label><br>
+                <input type="file" name="archivo" id="archivo" multiple class="adjuntar">
+        </p>
+        <!--elementos del html5-->
+        <p>
+            <label for="correo">Correo Electronico</label><br>
+            <input type="email" name="correo" id="correo"
+            required placeholder="Escriba su correo" class="cajas">
+        </p>
+        <!--tipo fecha-->
+        <p>
+            <label for="fecha">Ingresa fecha</label><br>
+            <input type="date" name="fecha" id="fecha" required class="cajas">
+        </p>
+        <p>
+            <label for="edad">Ingrsa su edad</label><br>
+            <input type="number" name="edad" id="edad" required 
+            class="cajas" min="10" max="50" step="5">
+        </p>
+        <p>
+            <label for="genero">Genero</label><br>
+            <input type="radio" name="sexo" id="sexo" value="F"
+            required checked>Femenino<br>
+            <input type="radio" name="sexo" id="sexo" value="M"
+            required> Masculino <br>
+        </p>
+
+        <p>
+            <label for="html">Seleccione sus lenguajes</label><br>
+            <input type="checkbox" name="html" id="html" 
+            value="html" required>HTML<br>
+
+            <input type="checkbox" name="css" id="css" 
+            value="css" required>CSS<br>
+
+            <input type="checkbox" name="js" id="js" 
+            value="javascript" required>Javascript<br>
+        </p>
+        <p>
+            <button class="boton rojo" name="eliminar" id="eliminar" onclick="eliminar()">Eliminar</button>
+            <button class="boton gris" name="modificar" id="modificar" ondblclick="modificar()">Modificar</button>
+            <button class="boton gris" name="imprimir" id="imprimir" onmouseover="imprimir()">Imprimir</button>
+        </p>
+        <p>
+                       <input type="submit" class="boton" name="remitir"value="Enviar informacion">
+                   </p>
+               </form>
+           </div>
+       </body>
